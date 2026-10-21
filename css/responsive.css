@@ -1,0 +1,128 @@
+/* 태블릿 */
+@media (max-width:1199px) {
+  .availability { display:none; }
+  .hero-inner { gap:3%; }
+  .hero-title { font-size:clamp(60px,7vw,90px); }
+  .hero-art { height:540px; }
+  .hero-lower { flex-direction:column; align-items:start; }
+  .hero-disciplines { text-align:left; }
+  .project-card-featured { min-height:450px; }
+  .project-card-featured .project-image { min-height:450px; }
+  .project-main-copy h3 { font-size:clamp(56px,6vw,80px); }
+  .project-info-featured { padding:32px; }
+}
+@media (max-width:900px) {
+  .header-inner { height:74px; }
+  .desktop-nav { display:none; }
+  .menu-toggle { display:flex; }
+  .menu-toggle[aria-expanded='true'] span:first-child { transform:translateY(3.75px) rotate(45deg); }
+  .menu-toggle[aria-expanded='true'] span:last-child { transform:translateY(-3.75px) rotate(-45deg); }
+  .mobile-nav:not([hidden]) { display:flex; position:absolute; top:100%; left:0; width:100%; background:var(--bg); padding:16px var(--page-gutter) 30px; border-bottom:1px solid var(--border); flex-direction:column; }
+  .mobile-nav a { display:flex; justify-content:space-between; padding:19px 0; border-bottom:1px solid var(--border); font:700 20px var(--font-display); }
+  .hero-inner { min-height:unset; grid-template-columns:1fr; gap:32px; }
+  .hero-copy { padding-bottom:0; }
+  .hero-eyebrow { margin-bottom:42px; }
+  .hero-title { font-size:clamp(66px,11vw,100px); }
+  .hero-lower { flex-direction:row; align-items:end; }
+  .hero-disciplines { text-align:right; }
+  .hero-scroll { margin-top:31px; }
+  .hero-art { height:430px; width:100%; }
+  .hero-art-main img, .hero-art-main .hero-slide img { width:85%; height:102%; }
+  .hero-bottom { margin-top:30px; }
+  .project-card-featured { grid-template-columns:1fr; }
+  .project-card-featured .project-image { min-height:430px; }
+  .project-info-featured { min-height:340px; }
+  .project-main-copy h3 { font-size:70px; }
+  .project-card-last { max-width:none; }
+  .project-text h3 { font-size:30px; }
+  .approach-inner { gap:5%; }
+  .approach-left h2 { font-size:clamp(57px,9vw,88px); }
+  .about-grid { grid-template-columns:1fr 2fr; gap:30px; }
+}
+/* 모바일 */
+@media (max-width:640px) {
+  :root { --page-gutter:22px; }
+  .section-block { padding-block:100px; }
+  .header-inner { height:68px; }
+  .brand { font-size:20px; }
+  .hero { padding-top:35px; }
+  .hero-eyebrow { font-size:9px; margin-bottom:55px; }
+  .hero-overline { font-size:9px; margin-bottom:19px; }
+  .hero-title { font-size:clamp(54px,12.4vw,82px); letter-spacing:var(--tracking-hero); }
+  .hero-lower { margin-top:31px; flex-direction:column; gap:19px; align-items:flex-start; }
+  .hero-description { font-size:18px; }
+  .hero-disciplines { font-size:9px; text-align:left; }
+  .hero-scroll { margin-top:29px; }
+  .hero-art { margin-top:9px; height:375px; padding:18px; }
+  .hero-art-main img, .hero-art-main .hero-slide img { width:114%; height:85%; }
+  .hero-art-foot { font-size:9px; }
+  .hero-art-mark { font-size:36px; }
+  .hero-bottom { font-size:9px; }
+  .hero-bottom span:last-child { display:none; }
+  .heading-row { margin-top:27px; gap:13px; }
+  .heading-row h2 { font-size:clamp(49px,10.5vw,73px); }
+  .works-count { font-size:12px; margin-top:8px; }
+  .section-description { flex-direction:column; align-items:flex-start; gap:20px; padding-bottom:28px; }
+  .section-description p { font-size:14px; }
+  .project-grid { grid-template-columns:1fr; row-gap:50px; }
+  .project-card-featured { grid-column:auto; }
+  .project-card-featured .project-image { min-height:unset; aspect-ratio:1.12; }
+  .project-info-featured { min-height:320px; padding:25px; }
+  .project-main-copy h3 { font-size:64px; }
+  .project-main-copy>p:last-child { font-size:14px; margin-top:16px; }
+  .project-image { aspect-ratio:1.25; }
+  .project-info { padding-top:22px; }
+  .project-text h3 { font-size:30px; }
+  .project-text>p:last-child { font-size:13px; }
+  .project-card-last { grid-column:auto; }
+  .works-footnote { text-align:left; font-size:11px; }
+  .placeholder-center strong { font-size:clamp(55px,12vw,80px); }
+  .placeholder-top,.placeholder-bottom { font-size:8px; }
+  .approach-inner,.about-grid { grid-template-columns:1fr; }
+  .approach-left h2 { margin-top:34px; font-size:clamp(69px,13vw,102px); }
+  .approach-right { padding-top:30px; }
+  .approach-lead { margin-bottom:38px; font-size:22px; }
+  .about-smallmark { display:none; }
+  .about-content h2 { font-size:clamp(50px,10vw,72px); }
+  .about-content>p:not(.about-note) { font-size:16px; margin-top:28px; }
+  .skills { margin-top:32px; }
+  .skills span { font-size:9px; }
+  .contact { padding-bottom:66px; }
+  .contact-top>span { display:none; }
+  .contact h2 { font-size:clamp(58px,11vw,78px); margin-top:45px; }
+  .contact h2 .heading-period { padding-left:10px; }
+  .contact-bottom { flex-direction:column; gap:30px; margin-top:66px; }
+  .contact-links { width:100%; }
+  .footer-inner { min-height:105px; flex-wrap:wrap; gap:12px; padding-block:25px; }
+  .footer-inner>span { order:3; width:100%; font-size:9px; }
+  .footer-inner #backTop { margin-left:auto; }
+  .dialog-inner { padding:22px; }
+}
+@media (max-width:370px) {
+  .hero-title { font-size:52px; }
+  .hero-art { height:305px; }
+  .project-main-copy h3 { font-size:54px; }
+  .image-index { font-size:8px; }
+}
+/* 사용자 설정에서 동작 줄이기를 선택했다면 애니메이션을 제거 */
+@media (prefers-reduced-motion:reduce) {
+  html { scroll-behavior:auto; }
+  *,*::before,*::after { animation-duration:.01ms!important; transition-duration:.01ms!important; }
+  .js-motion .reveal { opacity:1; transform:none; }
+}
+
+/* AMS 사이트 캡처 3종 반응형 */
+@media (max-width:1020px) {
+  .ams-sites-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .ams-site-placeholder strong { font-size:clamp(37px,5vw,65px); }
+}
+@media (max-width:640px) {
+  .ams-collection { margin-top:85px; padding-top:35px; }
+  .ams-collection-head { display:block; }
+  .ams-collection-head h3 { font-size:43px; }
+  .ams-collection-count { display:block; margin-top:20px; }
+  .ams-sites-grid { grid-template-columns:1fr; gap:35px; }
+  .ams-browser { aspect-ratio:1.4; }
+  .ams-site-placeholder strong { font-size:clamp(44px,12vw,65px); }
+  .ams-site-meta h4 { font-size:25px; }
+}
