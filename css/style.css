@@ -2,6 +2,11 @@
    SION.JIN 포트폴리오 / 공통 디자인 시스템
    색상·간격·타이포는 아래 CSS 변수에서 한 번에 변경할 수 있습니다.
    ========================================================== */
+
+/* SUIT VARIABLE FONT */
+@import url("https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css");
+
+
 :root {
   --bg: #F7F7F5;
   --surface: #FFFFFF;
@@ -961,4 +966,40 @@ body {
 
 body {
   letter-spacing: -0.02em;
+}
+
+/* =========================================
+   GLOBAL FONT - SUIT
+========================================= */
+
+html,
+body,
+button,
+input,
+textarea,
+select {
+  font-family: "SUIT Variable", "SUIT", sans-serif;
+}
+
+/* 프로젝트 소개 페이지 */
+.case-hero,
+.case-title,
+.case-intro,
+.case-meta,
+.case-section,
+.case-copy,
+.case-next,
+.gallery-item figcaption,
+.project-highlights {
+  font-family: "SUIT Variable", "SUIT", sans-serif;
+}
+
+/* 메인 페이지 */
+.site-header,
+.site-footer,
+.project-card,
+.gallery-card,
+.desktop-nav,
+.mobile-nav {
+  font-family: "SUIT Variable", "SUIT", sans-serif;
 }
