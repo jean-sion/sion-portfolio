@@ -66,7 +66,45 @@
       images: [
         null,
       ]
-    }
+    },
+    'AMS-VIEW': {
+      title: 'AMS 옥외 간판 디자인',
+      images: [
+        null,
+      ]
+    },
+
+     'SAO-COOKIE': {
+      title: '사오공감 쿠키 3종 패키지 디자인',
+      images: [
+        null,
+        './assets/images/project/ATHOME-PACK2.jpg',
+        './assets/images/project/ATHOME-PACK3.jpg',
+        './assets/images/project/ATHOME-PACK4.jpg'
+        
+
+      ]
+    },
+
+     'SAO-COOKIE2': {
+      title: '사오공감 쿠키 지관 패키지 디자인',
+      images: [
+        null,
+        './assets/images/project/ATHOME-PACK6.png'
+        
+
+      ]
+    },
+     'SAO-COOKIE3': {
+      title: '사오공감 라벨 디자인',
+      images: [
+        null,
+        
+
+      ]
+    },
+
+
   };
 
   const dialog = document.getElementById('portfolioPopup');
