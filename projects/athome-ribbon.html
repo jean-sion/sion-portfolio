@@ -1,0 +1,174 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+
+  <title>리본 페스츄리 상세페이지 | SION.JIN</title>
+
+
+
+  <link rel="stylesheet" href="../css/reset.css">
+
+  <style>
+    body {
+      margin: 0;
+      background: #fff;
+      color: #171717;
+      font-family: "SUIT Variable", "SUIT", sans-serif;
+      letter-spacing: 0;
+    }
+
+    /* 상단 */
+    .viewer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 5%;
+      border-bottom: 1px solid #eee;
+    }
+
+    .viewer-header a {
+      color: #171717;
+      text-decoration: none;
+    }
+
+    .viewer-logo {
+      font-size: 23px;
+      font-weight: 800;
+    }
+
+    .viewer-back {
+      font-size: 12px;
+    }
+
+    /* 작업물 제목 */
+    .viewer-intro {
+      max-width: 1100px;
+      margin: auto;
+      padding: 95px 30px 75px;
+    }
+
+    .viewer-category {
+      color: #F33800;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .06em;
+    }
+
+    .viewer-title {
+      margin: 20px 0 12px;
+      font-size: clamp(38px, 6vw, 76px);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -.025em;
+      overflow-wrap: anywhere;
+    }
+
+    .viewer-subtitle {
+      color: #777;
+      font-size: 15px;
+    }
+
+    /* 상세페이지 이미지를 원본 비율로 표시 */
+    .viewer-gallery {
+      width: min(100%, 900px);
+      margin: 0 auto 100px;
+    }
+
+    .viewer-gallery img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 하단 */
+    .viewer-footer {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 30px 100px;
+      border-top: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .viewer-footer a {
+      color: #171717;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .viewer-footer a:hover {
+      color: #F33800;
+    }
+
+    @media (max-width: 640px) {
+      .viewer-header { padding: 20px; }
+      .viewer-intro { padding: 65px 20px 45px; }
+      .viewer-gallery { margin-bottom: 60px; }
+      .viewer-footer { padding: 30px 20px 70px; }
+    }
+  </style>
+</head>
+
+<body id="top">
+
+  <header class="viewer-header">
+    <a href="../index.html" class="viewer-logo">
+      SION.JIN®
+    </a>
+
+    <a href="athome045.html" class="viewer-back">
+      ← BACK TO WORKS
+    </a>
+  </header>
+
+  <main>
+    <section class="viewer-intro">
+      <p class="viewer-category" id="workCategory">AT HOME 045 / DETAIL PAGE</p>
+      <h1 class="viewer-title" id="workTitle">리본 페스츄리</h1>
+      <p class="viewer-subtitle" id="workSubtitle">상품 상세페이지 디자인</p>
+    </section>
+
+    <!-- 실제 상세페이지 이미지가 표시될 곳 -->
+    <section class="viewer-gallery"
+             id="workGallery"
+             aria-label="디자인 상세 작업물">
+    </section>
+  </main>
+
+  <footer class="viewer-footer">
+    <a href="athome045.html">
+      ← BACK TO LIST
+    </a>
+    <a href="#top" id="nextWork">
+      BACK TO TOP ↑
+    </a>
+  </footer>
+
+  <script>
+  // 아래 배열에 로컬 이미지 경로를 추가하면 작성 순서대로 표시됩니다.
+  const ribbonImages = [
+    "../assets/images/project/detail-page/athome-ribbon/01.jpg",
+    "../assets/images/project/detail-page/athome-ribbon/02.gif",
+    "../assets/images/project/detail-page/athome-ribbon/05.jpg",,
+    "../assets/images/project/detail-page/athome-ribbon/06.gif",
+    "../assets/images/project/detail-page/athome-ribbon/09.jpg",
+  ];
+  const gallery = document.getElementById("workGallery");
+  ribbonImages.forEach((path, index) => {
+    const image = document.createElement("img");
+    image.src = path;
+    image.alt = `리본 페스츄리 상품 상세 이미지 ${index + 1}`;
+    image.decoding = "async";
+    gallery.append(image);
+  });
+</script>
+
+</body>
+</html>
