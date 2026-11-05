@@ -18,7 +18,64 @@
 <link href="./css/style.css" rel="stylesheet"/>
 <link href="./css/responsive.css" rel="stylesheet"/>
 <script defer="" src="./js/main.js"></script>
-<link href="./css/theme-orange.css" rel="stylesheet"/><link href="./css/gallery-popup.css" rel="stylesheet"/><script defer="True" src="./js/gallery-popup.js"></script></head>
+<link href="./css/theme-orange.css" rel="stylesheet"/><link href="./css/gallery-popup.css" rel="stylesheet"/><script defer="True" src="./js/gallery-popup.js"></script>
+<!-- TENPERCENT: More Works 전용 스타일 (기존 CSS 수정 없음) -->
+<style id="tenpercent-work-style">
+  .tp-gallery-card { position: relative; }
+  .tp-gallery-card .gallery-image { position: relative; }
+  .tp-gallery-label {
+    position: absolute; left: 14px; top: 14px; z-index: 2;
+    padding: 7px 10px; border-radius: 999px;
+    background: rgba(39,30,25,.84); color: #fff; letter-spacing: .07em;
+    font-size: 10px; font-weight: 700; line-height: 1.2;
+  }
+  .tp-work-dialog {
+    box-sizing: border-box; position: fixed; inset: 0;
+    width: min(760px, calc(100vw - 36px));
+    max-width: none; max-height: min(92dvh, 940px);
+    margin: auto; padding: 0; overflow-y: auto;
+    border: 0; border-radius: 15px; background: #f6f2ed; color: #30261f;
+    box-shadow: 0 32px 100px rgba(0,0,0,.25);
+  }
+  .tp-work-dialog::backdrop { background: rgba(12,10,9,.78); }
+  .tp-work-dialog[hidden], .tp-work-dialog [hidden] { display: none !important; }
+  .tp-dialog-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 18px; padding: 26px 30px 22px; border-bottom: 1px solid #ded5cc; }
+  .tp-dialog-kicker { margin: 0 0 8px; color: #9d6b48; font-size: 11px;
+    font-weight: 700; letter-spacing: .12em; }
+  .tp-dialog-title { margin: 0; font-size: clamp(22px, 3vw, 34px); line-height: 1.2;
+    color: #34241b; letter-spacing: -.04em; }
+  .tp-dialog-sub { margin: 7px 0 0; font-size: 13px; color: #70645c; }
+  .tp-dialog-close { flex-shrink: 0; width: 40px; height: 40px; border: 1px solid #cdbfb3;
+    border-radius: 50%; background: transparent; color: #4e392c; font-size: 22px;
+    line-height: 1; cursor: pointer; }
+  .tp-dialog-close:hover { background: #e8dfd7; }
+  .tp-dialog-grid { display: grid; grid-template-columns: minmax(0, 1fr);
+    padding: 26px 30px 30px; }
+  .tp-media-figure { min-width: 0; margin: 0; }
+  .tp-media-title { display: flex; justify-content: space-between; align-items: center;
+    gap: 10px; margin-bottom: 12px; font-size: 13px; font-weight: 700;
+    letter-spacing: .04em; }
+  .tp-media-type { font-size: 10px; color: #967a68; font-weight: 600; letter-spacing: .09em; }
+  .tp-media-frame { display: flex; position: relative; justify-content: center;
+    align-items: center; width: 100%; aspect-ratio: 2 / 3; overflow: hidden;
+    background: #b19a87; border-radius: 6px; }
+  .tp-media-frame img { display: block; width: 100%; height: 100%;
+    object-fit: contain; }
+  .tp-dialog-foot { padding: 0 30px 25px; font-size: 12px; line-height: 1.7;
+    color: #82766d; }
+  @media (max-width: 720px) {
+    .tp-work-dialog { width: calc(100vw - 18px); max-height: 95dvh; border-radius: 10px; }
+    .tp-dialog-head { padding: 20px 18px 16px; }
+    .tp-dialog-grid { padding: 20px 18px; }
+    .tp-media-frame { max-width: 440px; margin: auto; }
+    .tp-dialog-foot { padding: 0 18px 20px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .tp-gallery-card *, .tp-work-dialog * { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
 <body>
 
 
@@ -630,13 +687,38 @@
 
 
 
-    <p aria-live="polite" class="gallery-count" id="galleryCount">15 WORKS</p>
+    <p aria-live="polite" class="gallery-count" id="galleryCount">19 WORKS</p>
 
 
 
     <!-- 갤러리 시작 -->
 
     <div class="gallery-grid" id="moreWorksGrid">
+
+      <!-- 00. TENPERCENT / 커스텀 레시피 (포스터) -->
+      <button class="gallery-card tp-gallery-card" data-category="content" id="tenpercentWorkOpen"
+              type="button" aria-haspopup="dialog" aria-controls="tenpercentWorkDialog"
+              aria-label="텐퍼센트 커스텀 레시피 포스터 보기">
+        <div class="gallery-image">
+          <!-- 임시 비주얼: 완성된 포스터가 나오면 이 파일을 교체하세요. -->
+          <img src="./assets/images/project/ten.jpg"
+               alt="텐퍼센트 커스텀 레시피 포스터용 음료 비주얼"
+               width="1024" height="1536" loading="lazy" decoding="async" />
+          <span class="tp-gallery-label" aria-hidden="true">POSTER DESIGN</span>
+          <span aria-hidden="true" class="gallery-zoom">
+            <svg viewBox="0 0 24 24"><use href="#galleryZoomIcon"></use></svg>
+          </span>
+        </div>
+        <div class="gallery-info">
+          <div>
+            <h3>TENPERCENT · Custom Recipe</h3>
+            <p>포스터 디자인 · AI 이미지 디렉팅</p>
+          </div>
+          <span>01 ↗</span>
+        </div>
+      </button>
+
+
 
 
 
@@ -1437,5 +1519,46 @@
 </div>
 <p class="portfolio-popup-hint">키보드 ← → 이동 · ESC 닫기</p>
 </div>
-</dialog></body>
+</dialog>
+<!-- TENPERCENT 포스터 전용 팝업: 최종 포스터 이미지로 파일만 교체하면 됩니다. -->
+<dialog id="tenpercentWorkDialog" class="tp-work-dialog" aria-labelledby="tenpercentDialogTitle">
+  <div class="tp-dialog-head">
+    <div>
+      <p class="tp-dialog-kicker">SION.JIN / PERSONAL CONCEPT</p>
+      <h2 class="tp-dialog-title" id="tenpercentDialogTitle">TENPERCENT · Custom Recipe</h2>
+      <p class="tp-dialog-sub">Visual Poster · Photoshop / AI Image Direction</p>
+    </div>
+    <button class="tp-dialog-close" id="tenpercentWorkClose" type="button" aria-label="팝업 닫기">×</button>
+  </div>
+  <div class="tp-dialog-grid">
+    <figure class="tp-media-figure">
+      <figcaption class="tp-media-title">CUSTOM RECIPE POSTER <span class="tp-media-type">IMAGE</span></figcaption>
+      <div class="tp-media-frame">
+        <!-- 현재 이미지는 임시 음료 사진입니다. 최종 포스터로 같은 파일을 교체하세요. -->
+        <img src="./assets/images/project/ten-project.jpg"
+             alt="텐퍼센트 커스텀 레시피 포스터 디자인" loading="lazy" />
+      </div>
+    </figure>
+  </div>
+  <p class="tp-dialog-foot">* 개인 콘셉트 작업이며 상업적 캠페인 제작물은 아닙니다.</p>
+</dialog>
+<script id="tenpercent-work-script">
+(function () {
+  'use strict';
+  const opener = document.getElementById('tenpercentWorkOpen');
+  const dialog = document.getElementById('tenpercentWorkDialog');
+  const closer = document.getElementById('tenpercentWorkClose');
+  if (!opener || !dialog || !closer) return;
+
+  opener.addEventListener('click', () => {
+    if (!dialog.open) dialog.showModal();
+  });
+  closer.addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+  dialog.addEventListener('close', () => opener.focus());
+})();
+</script>
+</body>
 </html>
